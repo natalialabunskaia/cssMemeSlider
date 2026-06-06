@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Meme Slider</title>
+    <meta
+      name="description"
+      content="This is a meme slider built using pure HTML and CSS - no JavaScript."
+    />
+
+    <link rel="icon" href="./assets/happy.png" type="image/png" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Meme slider" />
+    <meta
+      property="og:description"
+      content="Meme slider built using pure HTML and CSS"
+    />
+    <meta
+      property="og:image"
+      content="./assets/memes/i-need-to-save-money.jpg"
+    />
+    <meta property="og:url" content="https://example.com/page" />
+
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="page__header">
+        <div class="logo">
+          <img
+            class="logo__image logo--animation"
+            src="./assets/smile.png"
+            alt="laughing smile"
+          />
+          <h1 class="logo__title">meme slider</h1>
+        </div>
+      </header>
+
+      <main class="page__main">
+        <h2 class="page__title">my favorite memes</h2>
+        <section class="slider">
+          <input
+            class="slider__input"
+            type="radio"
+            name="slide"
+            id="slide-1"
+            checked
+          />
+          <input class="slider__input" type="radio" name="slide" id="slide-2" />
+          <input class="slider__input" type="radio" name="slide" id="slide-3" />
+          <input class="slider__input" type="radio" name="slide" id="slide-4" />
+          <div class="slider__cards">
+            <article class="card" id="card-1">
+              <img
+                class="card__image image--animation"
+                src="./assets/memes/cat-erases-his-memory.jpg"
+                alt="Meme of a cat sitting under a desk lamp with Russian text joking that the cat erases its memory of eating five minutes ago so it can eat again."
+              />
+            </article>
+            <article class="card" id="card-2">
+              <img
+                class="card__image image--animation"
+                src="./assets/memes/i-dont-know-nothing.jpg"
+                alt="Meme featuring multiple overlapping images of a man sipping coffee with a knowing smile, joking about pretending not to know anything despite knowing more than necessary."
+              />
+            </article>
+            <article class="card" id="card-3">
+              <img
+                class="card__image image--animation"
+                src="./assets/memes/when-is-retirement.jpg"
+                alt="Meme of a cat sitting at a laptop with Russian text jokingly asking 'Sorry, when is retirement?' ten minutes after starting the workday."
+              />
+            </article>
+            <article class="card" id="card-4">
+              <img
+                class="card__image image--animation"
+                src="./assets/memes/show-me.jpg"
+                alt="Black-and-white meme of a wide-eyed cat with Russian text meaning 'Show me', expressing curiosity or disbelief."
+              />
+            </article>
+          </div>
+          <div class="slider__text">
+            <p class="text" id="text-1">
+              A cat erases its memory of eating five minutes ago so it can eat
+              again 😼
+            </p>
+            <p class="text" id="text-2">
+              Me pretending I have no idea what's going on when I actually know
+              everything 😏
+            </p>
+            <p class="text" id="text-3">
+              Me ten minutes into the workday: So... when's retirement? 😅
+            </p>
+            <p class="text" id="text-4">Ew. That's awful. Let me see 👀</p>
+          </div>
+          <div class="slider__dots">
+            <label for="slide-1" class="dot"></label>
+            <label for="slide-2" class="dot"></label>
+            <label for="slide-3" class="dot"></label>
+            <label for="slide-4" class="dot"></label>
+          </div>
+        </section>
+      </main>
+
+      <footer class="page__footer">
+        <p>&copy; 2026</p>
+      </footer>
+    </div>
+  </body>
+</html>
