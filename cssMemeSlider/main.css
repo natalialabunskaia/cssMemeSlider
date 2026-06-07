@@ -66,21 +66,65 @@ html {
 .logo__image {
   width: clamp(3rem, 15vw, 5rem);
   height: auto;
+  transition: transform 150ms ease;
+}
+
+.logo--animation:hover {
+  transform: translateY(-0.5rem);
+}
+
+.slider {
+  display: grid;
+  grid-template-areas:
+    'cards cards'
+    'text dots';
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  width: 100%;
+  max-width: 40rem;
+  margin-inline: auto;
 }
 
 .slider__input {
   display: none;
 }
 
+.slider__cards {
+  grid-area: cards;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+}
+
+.card {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 150ms ease;
+}
+
 .card__image {
+  display: block;
   width: 100%;
   max-width: 40rem;
-  height: auto;
+  height: clamp(18rem, 55vw, 30rem);
   object-fit: contain;
 }
 
+.slider__text {
+  grid-area: text;
+  width: 100%;
+}
+
+.text {
+  display: none;
+}
+
 .slider__dots {
-  grid-area: controls;
+  grid-area: dots;
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
@@ -99,4 +143,36 @@ html {
 .dot:hover {
   outline: 2px solid #5f9ea0;
   outline-offset: 3px;
+}
+
+#slide-1:checked ~ .slider__cards #card-1 {
+  transform: translateX(0);
+}
+
+#slide-1:checked ~ .slider__text #text-1 {
+  display: flex;
+}
+
+#slide-2:checked ~ .slider__cards #card-2 {
+  transform: translateX(-100%);
+}
+
+#slide-2:checked ~ .slider__text #text-2 {
+  display: flex;
+}
+
+#slide-3:checked ~ .slider__cards #card-3 {
+  transform: translateX(-200%);
+}
+
+#slide-3:checked ~ .slider__text #text-3 {
+  display: flex;
+}
+
+#slide-4:checked ~ .slider__cards #card-4 {
+  transform: translateX(-300%);
+}
+
+#slide-4:checked ~ .slider__text #text-4 {
+  display: flex;
 }
